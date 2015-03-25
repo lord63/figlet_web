@@ -1,69 +1,70 @@
 {% extends 'base.html' %}
 {% block body %}
   <div class="container">
-    <div class="header">
-      <nav>
-        <ul class="nav nav-pills pull-right">
-          <li role="presentation" class="active"><a href="/">Home</a></li>
-          <li role="presentation"><a href="#">About</a></li>
-          <li role="presentation"><a href="#">Github</a></li>
-        </ul>
-      </nav>
-      <h3 class="text-muted">Text to Ascii Art</h3>
 
+    <div class="masthead clearfix">
+      <div class="inner">
+        <h3 class="masthead-brand">Text to Ascii Art</h3>
+        <nav>
+          <ul class="nav masthead-nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Github</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
 
     <div class="select-group form-horizontal col-md-5">
-    <div class="form-group">
-    <label for="font">Font:</label>
-    <div class="col-md-6">
-    <select class="form-control input-sm"  id="font">
-      <option>3D-ASCII</option>
-      <option>Bigfig</option>
-      <option>Crazy</option>
-      <option>Fire Font-k</option>
-      <option>Wow</option>
-    </select>
-    </div>
-    </div>
+      <div class="form-group">
+        <label for="font">Font:</label>
+        <div class="col-md-6">
+          <select class="form-control input-sm"  id="font">
+            <option>3D-ASCII</option>
+            <option>Bigfig</option>
+            <option>Crazy</option>
+            <option>Fire Font-k</option>
+            <option>Wow</option>
+          </select>
+        </div>
+      </div>
 
-    <div class="form-group">
-    <label for="horizontalLayout">HorizontalLayout:</label>
-    <div class="col-md-4">
-    <select class="form-control input-sm" id="horizontalLayout">
-      <option>default</option>
-      <option>full</option>
-      <option>fitted</option>
-      <option>controlled smushing</option>
-      <option>universal smushin</option>
-    </select>
-    </div>
-    </div>
+      <div class="form-group">
+        <label for="horizontalLayout">HorizontalLayout:</label>
+        <div class="col-md-6">
+          <select class="form-control input-sm" id="horizontalLayout">
+            <option>default</option>
+            <option>full</option>
+            <option>fitted</option>
+            <option>controlled smushing</option>
+            <option>universal smushing</option>
+          </select>
+        </div>
+      </div>
 
-    <div class="form-group">
-    <label for="verticalLayout">VerticalLayout:</label>
-    <div class="col-md-4">
-    <select class="form-control input-sm" id="verticalLayout">
-      <option>default</option>
-      <option>full</option>
-      <option>fitted</option>
-      <option>controlled smushing</option>
-      <option>universal smushin</option>
-    </select>
+      <div class="form-group">
+        <label for="verticalLayout">VerticalLayout:</label>
+        <div class="col-md-6">
+          <select class="form-control input-sm" id="verticalLayout">
+            <option>default</option>
+            <option>full</option>
+            <option>fitted</option>
+            <option>controlled smushing</option>
+            <option>universal smushin</option>
+          </select>
+        </div>
+      </div>
     </div>
-    </div>
-    </div>
-
 
     <div class="col-md-7">
-{#    <div class="form-group">#}
-    <label for="input" class="last-label">Input Text Next:</label>
-    <input type="text" name="input_text" class="form-control" placeholder="Try it now." id="input">
-    <button type="button" class="btn btn-primary" id="generate">Generate</button>
-{#    </div>#}
+      <label for="input" class="last-label">Input Text Next:</label>
+      <input type="text" name="input_text" class="form-control" placeholder="Try it now." id="input">
+      <button type="button" class="btn btn-primary" id="generate">Generate</button>
     </div>
 
-    <div class="result"><pre></pre></div>
+    <div class="result">
+      <pre></pre>
+    </div>
 
   </div>
 
@@ -73,20 +74,19 @@
   <script src="http://cdn.bootcss.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
   <script src="{{ url_for('static', filename='js/figlet.js') }}"></script>
   <script>
-      $('#generate').on('click', function() {
-        figlet($('input').val(), {
-          font: $('#font').val(),
-          horizontalLayout: $('#horizontalLayout').val(),
-          verticalLayout: $('#verticalLayout').val()
-        }, function(err, data) {
-             if (err) {
-             console.log('Something went wrong...');
-             console.dir(err);
-             return;
-           }
-           $('pre').html(data);
-        });
+    $('#generate').on('click', function() {
+      figlet($('input').val(), {
+        font: $('#font').val(),
+        horizontalLayout: $('#horizontalLayout').val(),
+        verticalLayout: $('#verticalLayout').val()
+      }, function(err, data) {
+           if (err) {
+           console.log('Something went wrong...');
+           console.dir(err);
+           return;
+         }
+         $('pre').html(data);
       });
+    });
   </script>
-
 {% endblock %}

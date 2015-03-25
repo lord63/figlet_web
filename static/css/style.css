@@ -4,23 +4,47 @@ body {
   padding-bottom: 20px;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header {
-  padding-right: 15px;
-  padding-left: 15px;
+/* Header */
+.masthead {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 10px;
 }
 
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
+.masthead-brand {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-  padding-bottom: 19px;
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 40px;
+
+.masthead-nav > li {
+  display: inline-block;
 }
+
+.masthead-nav > li + li {
+  margin-left: 20px;
+}
+
+.masthead-nav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(51,51,51);
+  border-bottom: 2px solid transparent;
+}
+
+.masthead-nav > li > a:hover,
+.masthead-nav > li > a:focus {
+  background-color: transparent;
+  border-bottom-color: #837B7D;
+}
+
+.masthead-nav > .active > a,
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+  color: rgb(51,51,51);
+  border-bottom-color: #837B7D;
+}
+
 
 /* Customize container */
 @media (min-width: 768px) {
@@ -28,24 +52,29 @@ body {
     max-width: 730px;
   }
 }
+
 .container-narrow > hr {
   margin: 30px 0;
 }
 
-
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     /* Remove the padding we set earlier */
-    .header {
+    .masthead {
         padding-right: 0;
         padding-left: 0;
     /* Space out the masthead */
         margin-bottom: 30px;
     }
+  .masthead-brand {
+    float: left;
+  }
+  .masthead-nav {
+    float: right;
+  }
 }
 
 /* My modify */
-
 pre {
     clear: left;
 }
@@ -65,19 +94,19 @@ pre {
 
 /* Small devices (tablets, 768px and up) */
 @media (max-width: 768px) {
-    .header {
+    .masthead {
         margin-bottom: 10px;
         text-align: center;
     }
 
-    select {
-        clear: right
+    .masthead-brand {
+        padding-bottom: 0;
     }
 
-    .select-group {
-        border: none;
+    .masthead-nav {
+        margin-bottom: 10px;
     }
-    
+
     .select-group label {
         float: none;
     }
