@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Text to Ascii Art</title>
+    <title>Text to ASCII Art</title>
 
     <!-- Bootstrap -->
     <link href="http://cdn.bootcss.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
@@ -19,7 +19,18 @@
 
     <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}">
   </head>
-
+  <div class="container">
+    <div class="masthead clearfix">
+      <div class="inner">
+        <h3 class="masthead-brand">Text to ASCII Art</h3>
+        <nav>
+          <ul class="nav masthead-nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="https://github.com/lord63/figlet_web" target="_blank">Github</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
     {% block body %}{% endblock %}
-
+  </div>
 </html>

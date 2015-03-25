@@ -1,21 +1,8 @@
 {% extends 'base.html' %}
 {% block body %}
-  <div class="container">
-
-    <div class="masthead clearfix">
-      <div class="inner">
-        <h3 class="masthead-brand">Text to Ascii Art</h3>
-        <nav>
-          <ul class="nav masthead-nav">
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Github</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
 
     <div class="select-group form-horizontal col-md-5">
+
       <div class="form-group">
         <label for="font">Font:</label>
         <div class="col-md-6">
@@ -54,6 +41,7 @@
           </select>
         </div>
       </div>
+
     </div>
 
     <div class="col-md-7">
@@ -65,8 +53,6 @@
     <div class="result">
       <pre></pre>
     </div>
-
-  </div>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
