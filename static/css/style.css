@@ -57,8 +57,21 @@ body {
 }
 
 /* My modify */
-.dropdown-group {
-    width: 100px;
-    /*display: inline;*/
+
+pre {
+    clear: left;
+}
+
+.select-group {
+    border-right: 1px solid #e5e5e5;
+    margin-bottom: 20px;
+}
+
+#generate {
+    margin: 10px auto;
+}
+
+.select-group label {
+    float: left;
 }
 
