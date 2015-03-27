@@ -15,6 +15,7 @@ function generate() {
 }
 
 
+// Generate the text when user click the button.
 $('#generate').on('click', function() {
   generate();
 });
@@ -44,6 +45,10 @@ $.fn.onTypeFinished = function (func) {
   }
   return this;
 };
-
-
 $("input[name='input_text']").onTypeFinished(generate);
+
+
+// When user change fonts or layout style, regenerate the text.
+$('option').on('click', function() {
+  generate();
+});
