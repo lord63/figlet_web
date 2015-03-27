@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block body %}
 
-    <div class="select-group form-horizontal col-md-5">
+    <div class="select-group form-horizontal col-md-6">
 
       <div class="form-group">
         <label for="font">Font:</label>
@@ -44,10 +44,11 @@
 
     </div>
 
-    <div class="col-md-7">
-      <label for="input" class="last-label">Input Text Below:</label>
-      <input type="text" name="input_text" class="form-control" placeholder="Try it now." id="input">
-      <button type="button" class="btn btn-primary" id="generate">Generate</button>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="input" class="last-label">Input Text Below:</label>
+        <textarea id="input" class="form-contrl" rows="4">Try it now</textarea>
+      </div>
     </div>
 
     <div class="result">

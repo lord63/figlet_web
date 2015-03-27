@@ -87,14 +87,23 @@ pre {
 .select-group {
     border-right: 1px solid #e5e5e5;
     margin-bottom: 20px;
-}
-
-#generate {
-    margin: 10px auto;
+    padding-left: 30px;
 }
 
 .select-group label {
     float: left;
+}
+
+.input-group {
+    padding-left: 30px;
+}
+
+.last-label {
+  display: block;
+}
+
+textarea {
+    width: 93%;
 }
 
 /* Small devices (tablets, 768px and up) */
@@ -120,7 +129,7 @@ pre {
         border-right: none;
     }
 
-    .last-label {
-        margin-left: -15px;
+    textarea {
+        margin-left: 15px;
     }
 }

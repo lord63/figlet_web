@@ -1,6 +1,6 @@
 // Generate the text use input.
 function generate() {
-  figlet($('input').val(), {
+  figlet($('#input').val(), {
     font: $('#font').val(),
     horizontalLayout: $('#horizontalLayout').val(),
     verticalLayout: $('#verticalLayout').val()
@@ -45,7 +45,7 @@ $.fn.onTypeFinished = function (func) {
   }
   return this;
 };
-$("input[name='input_text']").onTypeFinished(generate);
+$("#input").onTypeFinished(generate);
 
 
 // When user change fonts or layout style, regenerate the text.
