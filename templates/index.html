@@ -59,20 +59,5 @@
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="http://cdn.bootcss.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
   <script src="{{ url_for('static', filename='js/figlet.js') }}"></script>
-  <script>
-    $('#generate').on('click', function() {
-      figlet($('input').val(), {
-        font: $('#font').val(),
-        horizontalLayout: $('#horizontalLayout').val(),
-        verticalLayout: $('#verticalLayout').val()
-      }, function(err, data) {
-           if (err) {
-           console.log('Something went wrong...');
-           console.dir(err);
-           return;
-         }
-         $('pre').html(data);
-      });
-    });
-  </script>
+  <script src="{{ url_for('static', filename='js/figlet_web.js') }}"></script>
 {% endblock %}
