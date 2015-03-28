@@ -84,6 +84,7 @@ pre {
     clear: left;
 }
 
+/* The left part: select fonts and layout sytle */
 .select-group {
     border-right: 1px solid #e5e5e5;
     margin-bottom: 20px;
@@ -94,6 +95,7 @@ pre {
     float: left;
 }
 
+/* The right part: input your text */
 .input-group {
     padding-left: 30px;
 }
@@ -124,11 +126,11 @@ textarea {
     .select-group label {
         float: none;
     }
-
+    /* Remove the right border */
     .select-group {
         border-right: none;
     }
-
+    /* Make the textarea align with the select groups */
     textarea {
         margin-left: 15px;
     }
