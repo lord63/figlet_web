@@ -15,6 +15,12 @@ function generate() {
 }
 
 
+// Generate the default text.
+if ($('#input').html() === 'Try it') {
+  generate();
+}
+
+
 // Generate the text when user click the button.
 $('#generate').on('click', function() {
   generate();
