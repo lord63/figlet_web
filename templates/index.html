@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 {% block body %}
 
-    <div class="select-group form-horizontal col-md-6">
+    <div class="select-group col-md-6">
+      <form class="form-horizontal">
       <div class="form-group">
-        <label for="font">Font:</label>
+        <label for="font" class="control-label col-md-6">Font:</label>
         <div class="col-md-6">
           <select class="form-control input-sm"  id="font">
             <optgroup label="ANSI FIGlet Fonts">
@@ -298,7 +299,7 @@
       </div>
 
       <div class="form-group">
-        <label for="horizontalLayout">HorizontalLayout:</label>
+        <label for="horizontalLayout" class="control-label col-md-6">HorizontalLayout:</label>
         <div class="col-md-6">
           <select class="form-control input-sm" id="horizontalLayout">
             <option>default</option>
@@ -311,7 +312,7 @@
       </div>
 
       <div class="form-group">
-        <label for="verticalLayout">VerticalLayout:</label>
+        <label for="verticalLayout" class="control-label col-md-6">VerticalLayout:</label>
         <div class="col-md-6">
           <select class="form-control input-sm" id="verticalLayout">
             <option>default</option>
@@ -322,13 +323,13 @@
           </select>
         </div>
       </div>
-
+    </form>
     </div>
 
     <div class="col-md-6">
       <div class="form-group">
-        <label for="input" class="last-label">Input Text Below:</label>
-        <textarea id="input" class="form-control" rows="4">Try it</textarea>
+        <label for="input" class="control-label">Input Text Below:</label>
+        <textarea id="input" class="form-control" rows="3">Hi</textarea>
       </div>
     </div>
 

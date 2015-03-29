@@ -16,7 +16,7 @@ function generate() {
 
 
 // Generate the default text.
-if ($('#input').html() === 'Try it') {
+if ($('#input').html() === 'Hi') {
   generate();
 }
 
