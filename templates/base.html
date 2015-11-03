@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="convert text to ascii art.">
+    <meta name="author" content="lord63">
     <title>Text to ASCII Art</title>
 
     <!-- Bootstrap -->
@@ -19,27 +19,35 @@
 
     <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}">
   </head>
-  <div class="container">
-    <div class="masthead clearfix">
-      <div class="inner">
-        <h3 class="masthead-brand">Text to ASCII Art</h3>
-        <nav>
-          <ul class="nav masthead-nav">
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="https://github.com/lord63/figlet_web" target="_blank">Github</a></li>
-          </ul>
-        </nav>
+  <body>
+    <div class="container">
+      <div class="masthead clearfix">
+        <div class="inner">
+          <h3 class="masthead-brand">Text to ASCII Art</h3>
+          <nav>
+            <ul class="nav masthead-nav">
+              <li class="active"><a href="/">Home</a></li>
+              <li><a href="https://github.com/lord63/figlet_web" target="_blank">Github</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
+      {% block body %}{% endblock %}
     </div>
-    {% block body %}{% endblock %}
-  </div>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='js/figlet.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/figlet_web.js') }}"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-69622009-3', 'auto');
-    ga('send', 'pageview');
-  </script>
+      ga('create', 'UA-69622009-3', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
 </html>
